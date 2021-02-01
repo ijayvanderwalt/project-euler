@@ -11,7 +11,7 @@ namespace project_euler
             Console.WriteLine("Hello World!");
             var answer = ProblemOne();
             Console.WriteLine(answer.ToString());
-            Console.WriteLine();
+            Console.WriteLine(ProblemTwo().ToString());
             Console.ReadLine();
         }
 
@@ -21,14 +21,23 @@ namespace project_euler
         }
         public static int ProblemTwo()
         {
-            for (int i = 1; i < 4000000; i++)
+            int total = 0;
+
+            int fibonacciFirst = 1, fibonacciSecond = 1;
+
+            while (fibonacciFirst <= 4000000)
             {
-                for (int j = 2; j < 4000000; j += i)
+                if (fibonacciFirst % 2 ==0)
                 {
-                    Console.WriteLine(i,j);
+                    total += fibonacciFirst;
                 }
+                int fibonacci_2_next = fibonacciFirst;
+                fibonacciFirst = fibonacciSecond + fibonacciFirst;
+                fibonacciSecond = fibonacci_2_next;
             }
-            
+            return total;
+
+
         }
     }
 }
