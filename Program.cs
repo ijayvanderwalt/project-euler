@@ -9,13 +9,8 @@ namespace project_euler
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            var answer = ProblemOne();
-            //Console.WriteLine(answer.ToString());
-            //Console.WriteLine(ProblemTwo().ToString());
-            //Console.WriteLine(ProblemThree().ToString());
-            //Console.WriteLine(ProblemFour().ToString());
-            Console.WriteLine(ProblemNine().ToString());
+
+            Console.WriteLine(ProblemTen().ToString());
             //Console.WriteLine(ProblemThirteen().ToString());
             Console.ReadLine();
         }
@@ -124,8 +119,10 @@ namespace project_euler
         }
         public static int ProblemSeven()
         {
-            List<int> primes = new List<int>();
-            primes.Add(2);
+            List<int> primes = new List<int>
+            {
+                2
+            };
             int nextPrime = 3;
             while (primes.Count <= 10001)
             {
@@ -171,14 +168,14 @@ namespace project_euler
         public static long ProblemNine()
         {
             int num = 1000;
-            
+
             for (int a = 1; a < num; a++)
             {
                 for (int b = a; b < num; b++)
                 {
                     for (int c = b; c < num; c++)
                     {
-                        if (a+b+c == num && Math.Pow(a,2) + Math.Pow(b,2) == Math.Pow(c,2))
+                        if (a + b + c == num && Math.Pow(a, 2) + Math.Pow(b, 2) == Math.Pow(c, 2))
                         {
                             return a * b * c;
                         }
@@ -189,6 +186,44 @@ namespace project_euler
 
             return 1;
         }
+        public static long ProblemTen()
+        {
+            long sum = 0;
+            List<int> primes = GetPrimes(2000000);
+            foreach (var item in primes)
+            {
+                sum += item;
+            }
+            return sum;
+        }
+        static List<int> GetPrimes(int val)
+        {
+            List<int> primes = new List<int>();
+            primes.Add(2);
+            for (int n = 3; n < val; n += 2)
+            {
+                bool prime = true;
+                foreach (int j in primes)
+                {
+                    if (n % j == 0)
+                    {
+                        prime = false;
+
+                        break;
+                    }
+                    if (j > Math.Sqrt(n))
+                    {
+                        break;
+                    }
+                }
+                if (prime)
+                {
+                    primes.Add(n);
+                }
+            }
+            return primes;
+        }
+
         public static BigInteger ProblemThirteen()
         {
             //            List<BigInteger> numbers = new List<BigInteger>
