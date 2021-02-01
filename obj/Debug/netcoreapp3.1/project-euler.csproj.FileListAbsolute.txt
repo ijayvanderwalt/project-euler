@@ -1,0 +1,13 @@
+C:\Users\Ijay\Documents\GitHub\project-euler\bin\Debug\netcoreapp3.1\project-euler.exe
+C:\Users\Ijay\Documents\GitHub\project-euler\bin\Debug\netcoreapp3.1\project-euler.deps.json
+C:\Users\Ijay\Documents\GitHub\project-euler\bin\Debug\netcoreapp3.1\project-euler.runtimeconfig.json
+C:\Users\Ijay\Documents\GitHub\project-euler\bin\Debug\netcoreapp3.1\project-euler.runtimeconfig.dev.json
+C:\Users\Ijay\Documents\GitHub\project-euler\bin\Debug\netcoreapp3.1\project-euler.dll
+C:\Users\Ijay\Documents\GitHub\project-euler\bin\Debug\netcoreapp3.1\project-euler.pdb
+C:\Users\Ijay\Documents\GitHub\project-euler\obj\Debug\netcoreapp3.1\project-euler.csprojAssemblyReference.cache
+C:\Users\Ijay\Documents\GitHub\project-euler\obj\Debug\netcoreapp3.1\project-euler.AssemblyInfoInputs.cache
+C:\Users\Ijay\Documents\GitHub\project-euler\obj\Debug\netcoreapp3.1\project-euler.AssemblyInfo.cs
+C:\Users\Ijay\Documents\GitHub\project-euler\obj\Debug\netcoreapp3.1\project-euler.csproj.CoreCompileInputs.cache
+C:\Users\Ijay\Documents\GitHub\project-euler\obj\Debug\netcoreapp3.1\project-euler.dll
+C:\Users\Ijay\Documents\GitHub\project-euler\obj\Debug\netcoreapp3.1\project-euler.pdb
+C:\Users\Ijay\Documents\GitHub\project-euler\obj\Debug\netcoreapp3.1\project-euler.genruntimeconfig.cache
