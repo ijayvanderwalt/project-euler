@@ -15,8 +15,8 @@ namespace project_euler
             //Console.WriteLine(ProblemTwo().ToString());
             //Console.WriteLine(ProblemThree().ToString());
             //Console.WriteLine(ProblemFour().ToString());
-            Console.WriteLine(ProblemOne().ToString());
-            Console.WriteLine(ProblemThirteen().ToString());
+            Console.WriteLine(ProblemSeven().ToString());
+            //Console.WriteLine(ProblemThirteen().ToString());
             Console.ReadLine();
         }
 
@@ -25,7 +25,7 @@ namespace project_euler
             List<int> numbers = new List<int>();
             for (int i = 0; i < 1000; i++)
             {
-                if (i%3==0 || i%5==0)
+                if (i % 3 == 0 || i % 5 == 0)
                 {
                     numbers.Add(i);
                 }
@@ -113,14 +113,40 @@ namespace project_euler
                 sumSquare += (i * i);
             }
             double sum = 0;
-            
+
             foreach (var item in numbers)
             {
                 sum += item;
             }
             double total = Math.Pow(sum, 2);
             double answer = total - sumSquare;
-            return answer ;
+            return answer;
+        }
+        public static int ProblemSeven()
+        {
+            List<int> primes = new List<int>();
+            primes.Add(2);
+            int nextPrime = 3;
+            while (primes.Count <= 10001)
+            {
+                int sqrt = (int)Math.Sqrt(nextPrime);
+                bool isPrime = true;
+                for (int i = 0; (int)primes[i] <= sqrt; i++)
+                {
+                    if (nextPrime % primes[i] == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime)
+                {
+                    primes.Add(nextPrime);
+                }
+                nextPrime += 2;
+            }
+            return primes[10000];
+
         }
         public static BigInteger ProblemThirteen()
         {
