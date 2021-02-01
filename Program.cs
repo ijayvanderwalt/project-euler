@@ -12,6 +12,7 @@ namespace project_euler
             var answer = ProblemOne();
             Console.WriteLine(answer.ToString());
             Console.WriteLine(ProblemTwo().ToString());
+            Console.WriteLine(ProblemThree().ToString());
             Console.ReadLine();
         }
 
@@ -38,6 +39,51 @@ namespace project_euler
             return total;
 
 
+        }
+
+        public static int ProblemThree()
+        {
+            long num = 600851475143;
+            int count = 3;
+            
+            while (num > 1)
+            {
+                if (num % count == 0)
+                {
+                    num /= count;
+                }
+                else
+                {
+                    count += 2;
+                }
+            }
+           
+            return count;
+        }
+        public static int ProblemFour()
+        {
+            int x, y;
+            string product = "", res = "";
+
+            for (x = 100; x <= 999; x++)//lowest to highest 3 digit numbers
+            {
+                for (y = 100; y <= 999; y++)
+                {
+                    product = Convert.ToString(x * y);
+
+                    if (product == new String(product.Reverse().ToArray()))
+                    {
+                        Console.WriteLine("X=" + x + " Y=" + y);
+                        res = product;
+
+                        Console.WriteLine("Polindrome is: " + res);
+                    }
+
+                    else { continue; }
+                }
+            }
+
+            return 1;
         }
     }
 }
