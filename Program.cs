@@ -15,7 +15,7 @@ namespace project_euler
             //Console.WriteLine(ProblemTwo().ToString());
             //Console.WriteLine(ProblemThree().ToString());
             //Console.WriteLine(ProblemFour().ToString());
-            Console.WriteLine(ProblemEight().ToString());
+            Console.WriteLine(ProblemNine().ToString());
             //Console.WriteLine(ProblemThirteen().ToString());
             Console.ReadLine();
         }
@@ -167,6 +167,27 @@ namespace project_euler
             }
             return largestProduct;
 
+        }
+        public static long ProblemNine()
+        {
+            int num = 1000;
+            
+            for (int a = 1; a < num; a++)
+            {
+                for (int b = a; b < num; b++)
+                {
+                    for (int c = b; c < num; c++)
+                    {
+                        if (a+b+c == num && Math.Pow(a,2) + Math.Pow(b,2) == Math.Pow(c,2))
+                        {
+                            return a * b * c;
+                        }
+                    }
+                }
+            }
+            double csquared = Math.Sqrt(1000);
+
+            return 1;
         }
         public static BigInteger ProblemThirteen()
         {
