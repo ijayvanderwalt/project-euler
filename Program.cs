@@ -15,14 +15,22 @@ namespace project_euler
             //Console.WriteLine(ProblemTwo().ToString());
             //Console.WriteLine(ProblemThree().ToString());
             //Console.WriteLine(ProblemFour().ToString());
-            Console.WriteLine(ProblemSix().ToString());
+            Console.WriteLine(ProblemOne().ToString());
             Console.WriteLine(ProblemThirteen().ToString());
             Console.ReadLine();
         }
 
         public static int ProblemOne()
         {
-            return Enumerable.Range(0, 1000).Where(n => n % 3 == 0 || n % 5 == 0).Sum();
+            List<int> numbers = new List<int>();
+            for (int i = 0; i < 1000; i++)
+            {
+                if (i%3==0 || i%5==0)
+                {
+                    numbers.Add(i);
+                }
+            }
+            return numbers.Sum();
         }
         public static int ProblemTwo()
         {
